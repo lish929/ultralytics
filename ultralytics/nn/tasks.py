@@ -72,6 +72,7 @@ from ultralytics.nn.modules import (
     Segment,
     Segment26,
     SemanticSegment,
+    TimmBackbone,
     TorchVision,
     WorldDetect,
     YOLOEDetect,
@@ -2244,7 +2245,7 @@ def parse_model(d, ch, verbose=True):
             args = [c1, c2, *args[1:]]
         elif m is CBFuse:
             c2 = ch[f[-1]]
-        elif m in frozenset({TorchVision, Index}):
+        elif m in frozenset({TorchVision, Index, TimmBackbone}):
             c2 = args[0]
             c1 = ch[f]
             args = [*args[1:]]

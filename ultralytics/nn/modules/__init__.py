@@ -94,6 +94,7 @@ from .head import (
     YOLOESegment26,
     v10Detect,
 )
+from .timm import TimmBackbone
 from .transformer import (
     AIFI,
     MLP,
@@ -181,6 +182,7 @@ __all__ = (
     "Segment26",
     "SemanticSegment",
     "SpatialAttention",
+    "TimmBackbone",
     "TorchVision",
     "TransformerBlock",
     "TransformerEncoderLayer",
